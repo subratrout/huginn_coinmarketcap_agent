@@ -5,8 +5,6 @@ module Agents
 
     cannot_receive_events!
 
-    gem_dependency_check { defined?(Coinmarketcap::Client) }
-
 
     description <<-MD
       The coinmarketcap agent creates an event for day's cryptocurrencies prices using coinmarketcap API.
@@ -86,7 +84,7 @@ module Agents
 
     def default_options
       {
-        "api_domain" => "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+        "api_domain" => "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
         "api_key" => ""
       }
     end
