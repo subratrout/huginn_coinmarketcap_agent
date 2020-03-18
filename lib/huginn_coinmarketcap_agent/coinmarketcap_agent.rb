@@ -111,6 +111,10 @@ module Agents
 
   private
 
+    def event_url
+      options['api_domain']
+    end
+
     def request_options
       {:headers => {"X-CMC_PRO_API_KEY" => options['api_key'], "Content-Type"=>"application/json"} }
     end
